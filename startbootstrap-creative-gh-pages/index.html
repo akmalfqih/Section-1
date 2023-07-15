@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>KSPM FEB Unila</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/My project.png" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="script.js">
+        <!-- animate.css-->  
+        <link href="assets/vendor/animate.css-master/animate.min.css" rel="stylesheet">
+        <!-- Load Screen -->
+        <link href="assets/vendor/loadscreen/css/spinkit.css" rel="stylesheet">
+        <!-- GOOGLE FONT -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+        <!-- Font Awesome 5 -->
+        <link href="assets/vendor/fontawesome/css/fontawesome-all.min.css" rel="stylesheet">
+        <!-- Fables Icons -->
+        <link href="assets/custom/css/fables-icons.css" rel="stylesheet"> 
+        <!-- Bootstrap CSS --> 
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap/css/bootstrap-4-navbar.css" rel="stylesheet">
+        <!-- portfolio filter gallery -->
+        <link href="assets/vendor/portfolio-filter-gallery/portfolio-filter-gallery.css" rel="stylesheet">
+        <!-- FANCY BOX -->
+        <link href="assets/vendor/fancybox-master/jquery.fancybox.min.css" rel="stylesheet"> 
+        <!-- RANGE SLIDER -->
+        <link href="assets/vendor/range-slider/range-slider.css" rel="stylesheet">
+        <!-- OWL CAROUSEL  --> 
+        <link href="assets/vendor/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/vendor/owlcarousel/owl.theme.default.min.css" rel="stylesheet">
+        <!-- FABLES CUSTOM CSS FILE -->
+        <link href="assets/custom/css/custom.css" rel="stylesheet">
+        <!-- FABLES CUSTOM CSS RESPONSIVE FILE -->
+        <link href="assets/custom/css/custom-responsive.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+
+
+
+    <body id="page-top">
+        <!-- Navigation-->
+
+        <nav class="navbar navbar-expand-lg bg-info py-3 fixed-top navbar-transparent nambah navscroll" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand ml-auto text-black font-weight-bold" href="#page-top">
+                    <img src="assets/img/My project.png" alt="" class="navbar-logo">
+                </a>
+        
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse navscroll" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-10 togel">
+                        <li class="nav-item"><a class="nav-link" href="#abot">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#servies">Work Program</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfoio">Member</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <script>
+            // Variables to keep track of scroll direction and last scroll position
+            let prevScrollPos = window.pageYOffset;
+            let scrollingUp = true;
+        
+            // Function to handle navbar visibility on scroll
+            const handleNavbarVisibility = function () {
+                const navbar = document.querySelector('#mainNav');
+        
+                // Get current scroll position
+                const currentScrollPos = window.pageYOffset;
+        
+                // Determine scroll direction
+                scrollingUp = currentScrollPos < prevScrollPos;
+        
+                // Update previous scroll position
+                prevScrollPos = currentScrollPos;
+        
+                // Show/hide navbar based on scroll direction
+                if (scrollingUp) {
+                    navbar.style.transform = 'translateY(0)';
+                } else {
+                    navbar.style.transform = `translateY(-${navbar.offsetHeight}px)`;
+                }
+            };
+        
+            // Show navbar on page load
+            handleNavbarVisibility();
+        
+            // Event listener for scroll
+            window.addEventListener('scroll', handleNavbarVisibility);
+        
+            // Collapse responsive navbar when toggler is clicked
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarResponsive = document.querySelector('#navbarResponsive');
+            const responsiveNavItems = [].slice.call(document.querySelectorAll('#navbarResponsive .nav-link'));
+        
+            navbarToggler.addEventListener('click', function () {
+                if (navbarResponsive.classList.contains('show')) {
+                    navbarResponsive.classList.remove('show');
+                } else {
+                    navbarResponsive.classList.add('show');
+                }
+            });
+        
+            responsiveNavItems.map(function (responsiveNavItem) {
+                responsiveNavItem.addEventListener('click', () => {
+                    if (window.getComputedStyle(navbarToggler).display !== 'none' && navbarResponsive.classList.contains('show')) {
+                        navbarToggler.click();
+                    }
+                });
+            });
+        
+            // Activate SimpleLightbox plugin for portfolio items
+            new SimpleLightbox({
+                elements: '#portfolio a.portfolio-box'
+            });
+        </script>
+        
+        
+
+
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container-fluid px-4 px-lg-1 h-100 jb">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">This is KSPM <span id="kspm-animation"> </span></h1>
+                        <hr class="divider hrjb" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline ajb">
+                        <p class="text-white-85 mb-5">KSPM FEB Unila that stand out for "Kelompok Studi Pasar Modal" was a community that creates a place for their members to learn and practice about the financial market</p>
+                        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+
+
+        <!-- About-->
+        <section class="page-section bg-chilli" id="about">
+                <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mb-3">About Us!</h2>
+                        <hr class="divider divider-light" />
+                        <video src="assets/img/vidabout.MOV" type="video/mp4" width="80%" loop autoplay muted>
+                        </video>
+                        <h2 class="text-white mb-4">Our Family</h2>
+                        <p class="text-white-aemm">
+                            KSPM FEB Unila is an organization that focuses on the study and development of the capital market. This organization operates under the auspices of the Faculty of Economics and Business (FEB) at the University of Lampung, located in Bandar Lampung, Indonesia. KSPM FEB Unila was established with the aim of enhancing students' understanding of the capital market, investment, and finance.
+                            The vision of KSPM FEB Unila is to create UKM-F KSPM FEB UNILA as a Center of Excellence for intellectually, creatively, and professionally capable students in the field of capital markets, 
+                            with a strong sense of togetherness. KSPM FEB Unila strives to provide insights, knowledge, and practical experience to students regarding the world of the capital market </p>
+                            <a class="btn btn-light btn-xl" href="#services">Join Us!</a>
+                </div>
+
+            </div>
+        </section>
+        <!-- AKHIR ABOUT -->
+
+        
+
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container px-4 px-lg-5">
+                <h2 class="text-center mt-0">Our work culture?</h2>
+                <hr class="divider" />
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-people fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Collaboration and Teamwork</h3>
+                            <p class="text-muted mb-0">Members work together, share ideas, and support each other in achieving common goals.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-book fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Continuous Learning</h3>
+                            <p class="text-muted mb-0">Emphasis on attending workshops and training sessions to stay updated on financial trends and developments.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-lightbulb fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Proactivity and Initiative</h3>
+                            <p class="text-muted mb-0">Encouraging members to take the lead in organizing events and proposing new ideas.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-people-fill fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Inclusivity and Respect</h3>
+                            <p class="text-muted mb-0">Valuing diverse perspectives and creating a positive and supportive environment for all members.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- reputasi -->
+        <section class="Reputation">
+            <div class="container warna">
+               <div class="row">
+                   <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center weare"> 
+                       <h1 class="fables-second-text-color font-35 font-weight-bold my-3 mt-md-5 mb-md-4">We Are KSPM!</h1>
+                       <p class="fables-forth-text-color">
+                        Introducing KSPM (Capital Market Study Group) FEB Unila! With a proud legacy and commitment to excellence, we are a reputable institution in capital market studies. Our dedicated team of aspiring professionals passionately navigates the financial world. Through initiatives and research, we are recognized for knowledge, innovation, and ethical practices. Empowering our members, we foster skilled leaders ready to make a significant impact to indonesian financial market literacy.
+                       </p> 
+                   </div>
+               </div>
+               <div class="row mt-4 mt-md-5">
+                   <div class="col-6 col-md-3  flex ini">
+                       <div class="fables-counter this">
+                           <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-main-text-color border fables-second-border-color d-inline-block px-4 py-2 mb-4" data-count="10">9</h2>
+                           <h3 class="font-14 semi-font fables-forth-text-color text-center">Media Partner</h3>
+                       </div>
+                   </div>
+                   <div class="col-6 col-md-3 flex this">
+                       <div class="fables-counter">
+                           <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-main-text-color border fables-second-border-color d-inline-block px-4 py-2 mb-4" data-count="25">24</h2>
+                           <h3 class="font-14 semi-font fables-forth-text-colo text-center">Work Program</h3>
+                       </div>
+                   </div>
+                   <div class="col-6 col-md-3 flex this">
+                       <div class="fables-counter">
+                           <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-main-text-color border fables-second-border-color d-inline-block px-4 py-2 mb-4" data-count="15">14</h2>
+                           <h3 class="font-14 semi-font fables-forth-text-color text-center">Awards Win</h3>
+                       </div>
+                   </div>
+                   <div class="col-6 col-md-3 flex this">
+                       <div class="fables-counter">
+                           <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-main-text-color border fables-second-border-color d-inline-block px-4 py-2 mb-4" data-count="34">33</h2>
+                           <h3 class="font-14 semi-font fables-forth-text-color text-center">Y.O.</h3>
+                       </div>
+                   </div>
+               </div>
+            </div>
+    
+         
+            <script>
+                function animateCounter(selector, maxLoops) {
+                    var loopCount = 0;
+                    var maxNumber = 0;
+                    
+                    $(selector).each(function () {
+                        var $this = $(this);
+                        var countTo = parseInt($this.attr("data-count"));
+                        maxNumber = Math.max(maxNumber, countTo);
+                    });
+            
+                    function startAnimation() {
+                        $(selector).each(function () {
+                            var $this = $(this);
+                            var countTo = parseInt($this.attr("data-count"));
+                            $({ countNum: 0 }).animate(
+                                {
+                                    countNum: countTo,
+                                },
+                                {
+                                    duration: 1200,
+                                    easing: "linear",
+                                    step: function () {
+                                        $this.text(Math.floor(this.countNum));
+                                    },
+                                    complete: function () {
+                                        loopCount++;
+                                        if (loopCount < maxLoops) {
+                                            startAnimation();
+                                        }
+                                    },
+                                }
+                            );
+                        });
+                    }
+            
+                    // Start the animation after the document is ready
+                    $(document).ready(function () {
+                        startAnimation();
+                    });
+                }
+            
+                // Call the animateCounter function with maxLoops=3
+                animateCounter(".fables-counter-value", 1);
+                
+                function isElementInViewport(el) {
+                    var rect = el.getBoundingClientRect();
+                    return (
+                        rect.top >= 0 &&
+                        rect.left >= 0 &&
+                        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                        );
+                    }
+            
+                    function animateWhenInView() {
+                        // Check if the Reputation section is in the viewport
+                        var reputationSection = document.querySelector('.Reputation');
+                        if (isElementInViewport(reputationSection)) {
+                            // Call the animateCounter function with maxLoops=3
+                            animateCounter(".fables-counter-value", 1);
+                            // Remove the event listener after the animation has been triggered
+                            window.removeEventListener('scroll', animateWhenInView);
+                        }
+                    }
+            
+                    // Attach the scroll event listener to trigger the animation
+                    window.addEventListener('scroll', animateWhenInView);
+                </script>
+            
+            </section>
+            
+
+
+
+
+        </section>
+        
+
+
+
+
+        <!-- Portfolio-->
+        <div id="portfolio">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+
+                    
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/dokumbidang1.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/dokumbidang1.jpg" alt="..." />
+                            <div class="portfolio-box-caption capt">
+                                <div class="project-category text-white-50"><H1>BIDANG 1</H1></div>
+                                <div class="project-name">FMAM</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/dokumbidang2.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/dokumbidang2.jpg" alt="..." />
+                            <div class="portfolio-box-caption capt">
+                                <div class="project-category text-white-50"><h1>BIDANG 2</h1></div>
+                                <div class="project-name">KSPM On Air</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/dokumbidang3.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/dokumbidang3.jpg" alt="..." />
+                            <div class="portfolio-box-caption capt">
+                                <div class="project-category text-white-50"><h1>BIDANG 2</h1></div>
+                                <div class="project-name">KSPM On Digital</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/dokumpi.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/dokumpi.jpg" alt="..." />
+                            <div class="portfolio-box-caption capt">
+                                <div class="project-category text-white-50"> <H1>BIDANG 2</H1></div>
+                                <div class="project-name">Tutorial Pasar Modal</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 khusus">
+                        <a class="portfolio-box" href="assets/img/dokumhumas.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/dokumhumas.jpg" alt="..." />
+                            <div class="portfolio-box-caption capt">
+                                <div class="project-category text-white-50"><h1>BIDANG 3</h1></div>
+                                <div class="project-name">Open Account</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/dokumsek.JPG" title="Project Name">
+                            <img class="img-fluid" src="assets/img/dokumsek.JPG" alt="..." />
+                            <div class="portfolio-box-caption capt">
+                                <div class="project-category text-white-50"><h1>BIDANG 1</h1></div>
+                                <div class="project-name">Sekolah Pasar Modal</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Overlay -->
+        <div id="overlay">
+            <div class="overlay-content">
+                <span class="close-button">&times; CLOSE</span>
+                <img class="img-fluid" src="" alt="..." id="overlay-image" />
+            </div>
+        </div>
+
+
+
+        <script>
+            const overlay = document.getElementById('overlay');
+            const overlayImage = document.getElementById('overlay-image');
+            const closeBtn = document.querySelector('.close-button');
+        
+            // Function to show the overlay
+            function showOverlay(imageSrc) {
+                overlay.style.display = 'flex';
+                overlayImage.src = imageSrc;
+            }
+        
+            // Function to hide the overlay
+            function hideOverlay() {
+                overlay.style.display = 'none';
+            }
+        
+            // Attach click event to close button to hide the overlay
+            closeBtn.addEventListener('click', hideOverlay);
+        
+            // Attach click event to each portfolio item
+            const portfolioItems = document.querySelectorAll('.portfolio-box');
+            portfolioItems.forEach(item => {
+                item.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const imageSrc = event.currentTarget.querySelector('img').getAttribute('src');
+                    showOverlay(imageSrc);
+                });
+            });
+        </script>
+        
+
+
+        <!-- Call to action-->
+
+        <section class="page-section bg-red text-white">
+            <div class="container px-4 px-lg-5 text-center">
+                <h1 class="mb-4">Curious?</h1>
+                <a class="btn btn-light btn-xl thi contact-icon" href="https://wa.me/1234567890">
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                    <span class="whatsapp-text uy">Contact Us</span>
+                </a>
+            </div>
+        </section>
+        
+        
+
+
+  
+        <!-- Footer-->
+    
+        <footer>
+            
+            <div class="footer-content">
+                <h3>Kelompok Studi Pasar Modal <br> Fakultas Ekonomi dan Bisnis <br> Universitas Lampung</h3>
+                <h6>Jl. Prof. Dr. Soemantri Brodjonegoro No. 1 Gedongmeneng Rajabasa Bandar Lampung, 35145. Indonesia</h6>
+                <p>If you still curious about anything related to KSPM FEB Unila from A to Z, click the icon below and reach us out!</p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-map-marker-alt"></i></a></li>
+                    
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    
+                </ul>
+
+            </div>
+            <div class="footer-bottom">
+                <p class="text-center">copyright &copy; <a href="#">@FaqihTech_Labs</a>  </p>
+            </div>
+        
+        </footer>
+
+  
+        
+        
+        
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

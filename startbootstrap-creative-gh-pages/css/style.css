@@ -1,0 +1,578 @@
+/* OVERRIDE */
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #fcfcfc;
+    font-family: sans-serif;
+}
+
+
+/* NAVBAR */
+/* Atur margin dan padding pada elemen navbar */
+
+#mainNav {
+    margin: 0;
+    padding: -100px !important;
+    z-index: 9999;
+    overflow-x: hidden !important;
+  }
+  
+  .navbar-nav .nav-link {
+    color: black !important;
+    transition: .5s;
+    /* margin-left: 80px; */
+    font-size: 19px !important;
+  }
+  
+  .navbar-nav .nav-link:hover{
+    color: white !important;
+  }
+  
+  
+  .nambah {
+    background-color: #1E94AC !important;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .pls a{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .navbar-logo {
+    
+    width: 90px;  
+    margin-left: 20px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: black;
+  }
+
+/* Navbar styles */
+
+
+
+
+/* AKHIR NAVBAR */
+
+
+
+/* JUMBOTRON */
+
+
+.jb {
+    background-image: url("https://lh3.googleusercontent.com/pw/AJFCJaV90XB0hedSbzptZC4eTs_Nq1tx685rYyFny69n4RH6jfkjQUZ3XSO8MPacXumWyHgPG_PSP-2oazE7onOzFVO2XeVn89LRJPkqns2x9QyiQJeRoOpsBFxfN0HOXWsiNIdYaG-W4ZN0gW-toWh_Dk4T=w1200-h730-s-no?authuser=0");
+    /* Ubah URL gambar sesuai dengan lokasi gambar Anda */
+    /* Mengatur background image memenuhi seluruh section */
+    background-size: cover;
+    /* Mengatur gambar berada di tengah-tengah section */
+    background-position: center;
+    /* Menyembunyikan gambar latar belakang pada viewport yang lebih kecil */
+    background-repeat: no-repeat;
+    /* Tambahkan tinggi (height) untuk section ini sesuai kebutuhan Anda */
+    height: 100vh;
+    /* Atur agar konten berada di tengah-tengah section */
+    overflow-x: hidden;
+    /* Atur z-index untuk menempatkan background image di atas elemen lain */
+    z-index: 1;
+    /* Hapus margin-bottom */
+    margin-top: -70px;
+    /* margin-top: -10px; */
+}
+
+@media (max-width: 1000px) {
+    .jb {
+        background-size: cover;
+        /* background-image: url("../assets/img/bgjumbotron.png"); */
+        background-attachment: fixed;
+        margin-top: -170px;
+        margin-bottom: -90px;
+        padding-top: 170px;
+        padding-bottom: 90px;
+        /* Menampilkan seluruh gambar latar belakang tanpa memotong pada viewport yang lebih kecil */
+    }
+}
+
+@keyframes animateKSPM {
+    20% {
+        content: "F";
+    }
+    25% {
+        content: "FE";
+    }
+    30% {
+        content: "FEB";
+    }
+    35% {
+        content: "FEB U";
+    }
+    40% {
+        content: "FEB Un";
+    }
+    45% {
+        content: "FEB Uni";
+    }
+    50% {
+        content: "FEB Unil";
+    }
+    55% {
+        content: "FEB Unila";
+    }
+    60%{
+        content: "FEB Unila"; 
+    }
+    65%{
+        content: "FEB Unila";
+
+    }
+    66%{
+        content: "FEB Unila!";
+
+    }
+    69%{
+        content: "FEB Unila!";
+
+    }
+    70%{
+        content: "FEB Unila!";
+
+    }
+    71%{
+        content: "FEB Unila!";
+
+    }
+    75%{
+        content: "FEB Unila!";
+
+    }
+
+
+
+    90% {
+        content: "FEB Unila";
+    }
+    91% {
+        content: "FEB Uni";
+    }
+    92% {
+        content: "FEB Un";
+    }
+    93% {
+        content: "FEB U";
+    }
+    94% {
+        content: "FEB ";
+    }
+    95% {
+        content: "FE";
+    }
+    97% {
+        content: "F";
+    }
+    100% {
+        content: "";
+    }
+}
+
+#kspm-animation::after {
+    display: inline-block;
+    content: " ";
+    animation: animateKSPM 4s steps(9) infinite;
+    animation-delay: .01s;
+}
+
+
+
+
+
+hr.divider {
+  height: 0.2rem;
+  max-width: 9.25rem;
+  margin: 1.5rem auto;
+  background-color:#ffffff;
+  opacity: 1;
+}
+
+.ajb a{
+    background-color: #1E94AC;
+    text-decoration: none;
+}
+
+.ajb a:hover {
+    background-color: #B60000;
+    text-decoration: none;
+    color: rgb(246, 246, 246);
+}
+
+.ajb p{
+    color: white;
+    
+}
+
+
+
+
+/* AKHIR JUMBOTRON */
+
+
+
+
+/* ABOUT */
+
+
+/* Gradasi yang sangat halus */
+#about {
+    font-size: 20px;
+    background-color: #AC361E;
+    margin-bottom: 20px; /* Menambahkan margin bawah untuk jarak dengan section selanjutnya */
+}
+
+  
+
+
+#about p{
+    color: #fff;
+}
+
+
+.about-section {
+    padding-top: 10rem;
+    background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 100%, rgba(0, 0, 0, 0.8) 100%);
+  }
+  .about-section p {
+    margin-bottom: 5rem;
+  }
+
+
+/* AKHIR ABOUT */
+
+
+
+/* REPUTASI */
+
+.ini h2{
+    font-size: 40px;
+}
+
+.ini{
+    border-radius: 50% !important;
+}
+
+.fables-counter-value {
+    border: 10px solid black;
+    border-radius: 10%;
+}
+
+
+.fables-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Untuk menyatukan elemen ke tengah horizontal */
+  }
+
+  .fables-counter h3 {
+    text-align: center; /* Untuk menyatukan teks di tengah secara horizontal */
+  }
+
+.warna{
+    background-color:#1E94AC;
+    border-radius: 40px;
+    padding: 30px;
+    margin-bottom: 100px;
+
+}
+
+.weare h1{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* background-color: rgb(182, 0, 0); */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.weare p{
+    font-size: 20px;
+    font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+}
+
+.this h2{
+    background-color: #ffffff;
+    border: 7px solid #fffdfd !important;
+    border-radius: 10%;
+    max-height: 70px;
+    transition: .3s;
+}
+
+.this h2:hover{
+    transform: scale(1.2);
+}
+
+/* AKHIR REPUTASI */
+
+
+
+
+
+
+
+/* DOKUMENTASI */
+
+.bg-red{
+    margin-top: 20px;
+    background-color: #B60000;
+}
+
+/* Styling for the overlay */
+/* Styling for the overlay */
+/* Styling for the overlay */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+}
+
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+/* Styling for the overlay image */
+#overlay-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    padding: 80px 320px !important;
+
+   
+}
+
+/* Styling for the close button */
+.close-button {
+    position: absolute;
+    top: 35px;
+    right: auto;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1;
+    padding: 4px;
+}
+
+/* Media Query for smaller screen sizes */
+@media (max-width: 1068px) {
+    .close-button {
+        margin: 20px;
+        right: 10px;
+        font-size: 18px;
+    }
+
+    #overlay-image{
+        
+        padding: 0px !important;
+        margin-top: 42px;
+    }
+}
+
+/* Media Query for even smaller screen sizes */
+@media (max-width: 976px) {
+    #overlay-image {
+        margin-top: 100px;
+        max-width: 90%;
+        max-height: 90%;
+        padding: 0px !important;
+    }
+    .close-button {
+        top: 5px;
+        right: 5px;
+        font-size: 16px;
+    }
+}
+
+
+.capt{
+    font-weight: bold;
+    color: #000000;
+}
+
+
+.TUL{
+    color: #000;
+    font-size: 20PX;
+
+}
+
+.BUL{
+    color: white;
+    font-size: 13PX;
+}
+
+/* AKHIR DOKUMENTASI */
+
+
+
+/* FOOTER */
+footer{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1E94AC;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 40px;
+    color: #000000;
+    
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+}
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+    overflow: hidden;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+    overflow: hidden;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+
+    border-radius: 50%;
+
+}
+.socials a i{
+    font-size: 1.1rem;
+    width: 20px;
+
+
+    transition: color .4s ease;
+
+}
+.socials a:hover{
+    color: #B60000;
+}
+
+.footer-bottom p{
+    background: #454242;
+    width: 100vw;
+    padding: 20px;
+    padding-bottom: 40px;
+    padding-right: 50px;
+    text-align: center;
+    margin-bottom: -20px;
+}
+.footer-bottom a{
+   
+    color: #228452;
+}
+
+&copy{
+    color: black;
+}
+
+
+@media (max-width:500px) {
+.footer-menu ul{
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add margin to the WhatsApp icon */
+.fa-whatsapp {
+    margin-right: 5px; /* Adjust the value as needed */
+    /* margin-top: 4px; */
+}
+
+/* Add margin to the WhatsApp text */
+
+.uy{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.uy:hover{
+    color: white;
+}
+
+.thi{
+    background-color: #1E94AC;
+}
+
+.thi:hover{
+    background-color: #25D366;
+    color: white;
+}
+
